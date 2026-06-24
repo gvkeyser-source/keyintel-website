@@ -2,10 +2,10 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // 1. SERVE THE LOGO FROM YOUR R2 BUCKET
+    // 1. SERVE THE LOGO FROM YOUR REPOSITORY ASSETS
     if (url.pathname === '/images/logo.png') {
-      // Notice the 'env.' prefix before MY_BUCKET
-      const object = await env.MY_BUCKET.get('images/logo.png');
+      return env.ASSETS.fetch(request);
+    }
       
       if (!object) {
         return new Response('Logo not found', { status: 404 });
