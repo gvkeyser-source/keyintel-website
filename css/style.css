@@ -146,6 +146,7 @@ nav a:hover, nav a.active {
     display: flex;
     align-items: center;
     min-height: 90vh;
+    background-color: var(--primary);
 }
 
 .hero-minimal {
@@ -194,29 +195,55 @@ nav a:hover, nav a.active {
     margin: 0 auto;
 }
 
-/* SVG Inline Intelligence Canvas */
-.hero-graphic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* ==========================================================
+   Epic Network Animation Enhancements
+   ========================================================== */
 
+/* Subtle breathing movement for the entire network */
 .network-svg {
-    width: 100%;
-    max-width: 380px;
-    opacity: 0.85;
+  animation: floatNetwork 8s ease-in-out infinite;
+  transform-origin: center;
 }
 
-.node {
-    animation: drift 6s ease-in-out infinite alternate;
-}
-.node:nth-child(even) {
-    animation-duration: 8s;
+/* Make key core nodes pulse with light */
+.network-nodes .node-1,
+.network-nodes .node-3,
+.network-nodes .node-5 {
+  animation: nodeGlow 3s ease-in-out infinite alternate;
+  transform-origin: calc(var(--cx, 0) * 1px) calc(var(--cy, 0) * 1px);
 }
 
-@keyframes drift {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(4px, -4px); }
+/* Individual animation delays for overlapping data pulses */
+.dot-1 { animation: pulseIntensity 2s infinite alternate; }
+.dot-2 { animation: pulseIntensity 2.5s infinite alternate; animation-delay: 0.5s; }
+.dot-3 { animation: pulseIntensity 1.8s infinite alternate; animation-delay: 1s; }
+
+/* Interactive hover effect to make the network feel alive */
+.hero-graphic:hover .node {
+  stroke: #50e3c2 !important;
+  r: 7px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-graphic:hover line {
+  stroke: rgba(255, 255, 255, 0.3);
+  transition: stroke 0.4s ease;
+}
+
+/* Keyframes for the Epic Effects */
+@keyframes floatNetwork {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes nodeGlow {
+  0% { stroke-width: 2.5; filter: drop-shadow(0 0 2px rgba(99, 102, 241, 0.5)); }
+  100% { stroke-width: 4; filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.9)); }
+}
+
+@keyframes pulseIntensity {
+  0% { opacity: 0.6; r: 3px; }
+  100% { opacity: 1; r: 5px; }
 }
 
 /* Minimalist Button Matrix */
