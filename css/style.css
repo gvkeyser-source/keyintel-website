@@ -1,0 +1,746 @@
+/* ==========================================================
+   KeyIntel
+   Global Styles
+========================================================== */
+
+:root {
+
+    --primary: #01013F;
+    --secondary: #250923;
+
+    --surface: #161A55;
+    --surface-light: #20256E;
+
+    --accent: #6D5DF6;
+    --accent-hover: #8476FF;
+
+    --text: #FFFFFF;
+    --text-light: #D7DAF7;
+    --muted: #A9AFD5;
+
+    --border: rgba(255,255,255,.08);
+
+    --radius: 18px;
+
+    --shadow: 0 20px 60px rgba(0,0,0,.35);
+
+    --transition: .3s ease;
+
+    --max-width: 1200px;
+
+}
+
+/* ==========================================================
+   Reset
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(109,93,246,.18),
+    transparent 35%),
+
+    linear-gradient(
+    180deg,
+    #01013F 0%,
+    #090839 20%,
+    #10113A 45%,
+    #1A1431 70%,
+    #250923 100%);
+
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+
+    width:min(92%, var(--max-width));
+    margin:auto;
+
+}
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    max-width:760px;
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+.section-title h2{
+
+    font-size:2.5rem;
+    margin-bottom:20px;
+
+}
+
+.section-title p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   Header
+========================================================== */
+
+.header{
+
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(1,1,63,.72);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
+
+}
+
+/* ==========================================================
+   Logo
+========================================================== */
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:48px;
+    width:auto;
+    display:block;
+    transition:transform .3s ease;
+}
+
+.logo img:hover{
+    transform:scale(1.03);
+}
+
+nav ul{
+
+    display:flex;
+    gap:32px;
+
+}
+
+nav a{
+
+    color:var(--text-light);
+    transition:var(--transition);
+
+}
+
+nav a:hover,
+nav a.active{
+
+    color:white;
+
+}
+
+/* ==========================================================
+   Hero
+========================================================== */
+
+.hero{
+
+    min-height:88vh;
+
+    display:flex;
+    align-items:center;
+
+}
+
+.hero-grid{
+
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.eyebrow{
+
+    color:var(--accent);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+}
+
+.hero-text{
+
+    color:var(--text-light);
+
+    font-size:1.15rem;
+
+    margin-bottom:40px;
+
+    max-width:620px;
+
+}
+
+/* ==========================================================
+   Button
+========================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn:hover{
+
+    background:var(--accent-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 40px rgba(109,93,246,.35);
+
+}
+
+/* ==========================================================
+   Hero Panel
+========================================================== */
+
+.hero-panel{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.metric{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.metric h3{
+
+    margin-bottom:10px;
+
+}
+
+.metric p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   Cards
+========================================================== */
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:rgba(109,93,246,.18);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.5rem;
+
+    margin-bottom:25px;
+
+}
+
+.card h3{
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.cta{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid var(--border);
+
+    border-radius:26px;
+
+    padding:70px;
+
+    text-align:center;
+
+}
+
+.cta h2{
+
+    font-size:2.3rem;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   Footer
+========================================================== */
+
+footer{
+
+    margin-top:80px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.footer{
+
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+
+    padding:60px 0;
+
+}
+
+.footer h3{
+
+    margin-bottom:15px;
+
+}
+
+.footer p{
+
+    color:var(--muted);
+
+    max-width:350px;
+
+}
+
+.footer a{
+
+    display:block;
+
+    color:var(--text-light);
+
+    margin-bottom:12px;
+
+    transition:var(--transition);
+
+}
+
+.footer a:hover{
+
+    color:white;
+
+}
+
+.copyright{
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+    padding:20px;
+
+    color:var(--muted);
+
+}
+
+/* ==========================================================
+   Dark Section
+========================================================== */
+
+.dark-section{
+
+    background:rgba(255,255,255,.02);
+
+}
+
+/* ==========================================================
+   Pricing Cards
+========================================================== */
+
+.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.price{
+
+    font-size:2rem;
+
+    color:var(--accent);
+
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+/* ==========================================================
+   Dashboard Placeholder
+========================================================== */
+
+.dashboard-placeholder{
+
+    min-height:600px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    border:2px dashed rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.03);
+
+    color:var(--text-light);
+
+    padding:50px;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:900px){
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.pricing-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer{
+
+    flex-direction:column;
+
+}
+
+nav ul{
+
+    gap:18px;
+
+}
+
+.hero{
+
+    min-height:auto;
+
+    padding:100px 0;
+
+}
+
+.hero h1{
+
+    font-size:2.8rem;
+
+}
+
+.cta{
+
+    padding:45px;
+
+}
+
+.section{
+
+    padding:80px 0;
+
+}
+
+}
+
+@media (max-width:600px){
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.nav{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.hero h1{
+
+    font-size:2.3rem;
+
+}
+
+.section-title h2{
+
+    font-size:2rem;
+
+}
+
+}
+
+/* ==========================================================
+   Featured Pricing Card
+========================================================== */
+
+.card.featured{
+
+    position:relative;
+
+    border:2px solid var(--accent);
+
+    transform:scale(1.03);
+
+    box-shadow:0 25px 70px rgba(109,93,246,.25);
+
+}
+
+.card.featured::before{
+
+    content:"Most Popular";
+
+    position:absolute;
+
+    top:-15px;
+    right:25px;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   Dashboard Layout
+========================================================== */
+
+.dashboard-layout{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+.dashboard-sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.dashboard-sidebar h3{
+
+    margin-bottom:10px;
+
+}
+
+.dashboard-sidebar>p{
+
+    color:var(--text-light);
+
+}
+
+.sidebar-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:24px;
+
+}
+
+.sidebar-card h4{
+
+    margin-bottom:10px;
+
+}
+
+.sidebar-card p{
+
+    color:var(--text-light);
+
+}
+
+@media (max-width:900px){
+
+.dashboard-layout{
+
+    grid-template-columns:1fr;
+
+}
+
+}
