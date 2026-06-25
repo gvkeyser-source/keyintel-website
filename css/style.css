@@ -153,6 +153,7 @@ nav a:hover, nav a.active {
     position: relative;
     padding: 12rem 0 4rem 0;
     text-align: center;
+    background-color: var(--primary);
 }
 
 .hero-glow {
