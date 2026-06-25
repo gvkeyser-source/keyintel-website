@@ -1,198 +1,182 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeyIntel | Do More With Your Data</title>
-    <meta name="description" content="KeyIntel provides fractional business intelligence and performance consulting through live dashboards, automated reporting and strategic data solutions.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeyIntel | Do More With Your Data</title>
+  <meta name="description" content="KeyIntel provides fractional business intelligence and performance consulting through live dashboards, automated reporting and strategic data solutions.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="KeyIntel Logo">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="what-is-bi.html">What is BI</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="dashboard.html">Example Dashboard</a></li>
-                </ul>
-            </nav>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="KeyIntel">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-is-bi.html">What is BI</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="mailto:hello@keyintel.co.nz" class="btn btn-primary" style="padding:0.5rem 1.1rem;font-size:0.82rem;">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content-wrap">
+      <div class="container hero-grid">
+
+        <!-- Left -->
+        <div class="hero-left">
+          <div class="hero-badge">Fractional Business Intelligence</div>
+          <h1>Do More With<br><span class="accent-text">Your Data</span></h1>
+          <p class="hero-sub">
+            Executive-grade BI for growing organisations — without the cost of an internal team. Live dashboards, automated reporting and strategic intelligence built for confident decisions.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:hello@keyintel.co.nz" class="btn btn-primary">Get in Touch</a>
+            <a href="dashboard.html" class="btn btn-ghost">View Dashboard Example</a>
+          </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-glow"></div>
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <p class="eyebrow">Business Intelligence Without Enterprise Overhead</p>
-                <h1>Do More With Your Data</h1>
-                <p class="hero-text">
-                    Executive Business Intelligence for growing organisations. Access premium data infrastructure and strategic intelligence at a fraction of the cost of building an internal team.
-                </p>
-                <div class="hero-actions">
-                    <a href="mailto:hello@keyintel.co.nz" class="btn btn-primary">Contact Us</a>
-                </div>
+        <!-- Right panel -->
+        <div class="hero-panel">
+          <p class="hero-panel-title">Live Performance Snapshot</p>
+          <div class="hero-stat-row">
+            <div class="hero-stat">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-stat-val">$4.8M</div>
+                <div class="hero-stat-label">Revenue tracked this month</div>
+              </div>
             </div>
-            
-            <!-- Epic SVG Intelligence Network Graphic -->
-<div class="hero-graphic">
-    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="network-svg">
-        <!-- Definitions for Glow Effects and Gradients -->
-        <defs>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
-            <radialGradient id="net-glow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.25" />
-                <stop offset="100%" stop-color="#01013f" stop-opacity="0" />
-            </radialGradient>
-        </defs>
-
-        <!-- Ambient Background Network Glow -->
-        <circle cx="200" cy="200" r="160" fill="url(#net-glow)" filter="url(#glow)" />
-
-        <!-- Connection Lines -->
-        <g class="network-lines">
-            <line x1="100" y1="100" x2="250" y2="80" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-            <line x1="250" y1="80" x2="320" y2="200" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-            <line x1="100" y1="100" x2="180" y2="240" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-            <line x1="180" y1="240" x2="320" y2="200" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-            <line x1="180" y1="240" x2="120" y2="320" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-            <line x1="320" y1="200" x2="280" y2="340" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-            <line x1="120" y1="320" x2="280" y2="340" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-        </g>
-        
-        <!-- Animated Data Pulses with Neon Glow -->
-        <g filter="url(#glow)">
-            <circle r="4" fill="#6366f1" class="pulse-dot dot-1">
-                <animateMotion dur="4s" repeatCount="indefinite" path="M 100 100 L 250 80 L 320 200 L 180 240 Z" />
-            </circle>
-            <circle r="3.5" fill="#38bdf8" class="pulse-dot dot-2">
-                <animateMotion dur="6s" repeatCount="indefinite" path="M 280 340 L 120 320 L 180 240 L 100 100" />
-            </circle>
-            <circle r="4" fill="#a855f7" class="pulse-dot dot-3">
-                <animateMotion dur="5s" repeatCount="indefinite" path="M 320 200 L 180 240 L 280 340 Z" />
-            </circle>
-        </g>
-
-        <!-- Interactive Nodes -->
-        <g class="network-nodes">
-            <circle cx="100" cy="100" r="6" fill="#01013f" stroke="#6366f1" stroke-width="2.5" class="node node-1" />
-            <circle cx="250" cy="80" r="5" fill="#01013f" stroke="#ffffff" stroke-width="2" class="node node-2" />
-            <circle cx="320" cy="200" r="6" fill="#01013f" stroke="#a855f7" stroke-width="2.5" class="node node-3" />
-            <circle cx="180" cy="240" r="5" fill="#01013f" stroke="#ffffff" stroke-width="2" class="node node-4" />
-            <circle cx="120" cy="320" r="6" fill="#01013f" stroke="#38bdf8" stroke-width="2.5" class="node node-5" />
-            <circle cx="280" cy="340" r="5" fill="#01013f" stroke="#ffffff" stroke-width="2" class="node node-6" />
-        </g>
-    </svg>
-</div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-stat-val">18.4%</div>
+                <div class="hero-stat-label">Average profit margin improvement</div>
+              </div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero-stat-val">7,980</div>
+                <div class="hero-stat-label">Customer records consolidated</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Problem Section -->
-    <section class="section">
-        <div class="container container-narrow">
-            <div class="section-title">
-                <h2>From Spreadsheet Chaos to Business Clarity</h2>
-                <p>
-                    Many growing businesses spend countless hours preparing reports instead of using them. Information lives across multiple systems, manual spreadsheets become difficult to trust, and important decisions are delayed.
-                </p>
-                <p>
-                    KeyIntel provides an outsourced business performance function that continuously integrates, organises and visualises your business data. The result is reliable reporting, greater visibility and practical intelligence that supports confident decision making.
-                </p>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Capabilities Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Core Capabilities</h2>
-            </div>
-            <div class="cards-grid">
-                <article class="card">
-                    <div class="card-icon">
-                        <!-- Modern Integration Icon -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                        </svg>
-                    </div>
-                    <h3>Automated Data Integration</h3>
-                    <p>Connect separate business systems into a single source of truth, removing repetitive manual reporting.</p>
-                </article>
-                
-                <article class="card">
-                    <div class="card-icon">
-                        <!-- Modern Dashboard / Layout Icon -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                            <path d="M9 3v18M3 9h18" />
-                        </svg>
-                    </div>
-                    <h3>Live Performance Dashboards</h3>
-                    <p>Build clear visual dashboards that provide real time insight into the metrics that matter most.</p>
-                </article>
-                
-                <article class="card">
-                    <div class="card-icon">
-                        <!-- Modern Intelligence / Target Icon -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
-                        </svg>
-                    </div>
-                    <h3>Actionable Business Intelligence</h3>
-                    <p>Identify operational inefficiencies and opportunities using clean, connected and trustworthy data.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+  <!-- Problem -->
+  <section class="section problem-section">
+    <div class="container">
+      <div class="problem-inner reveal">
+        <p class="eyebrow">The Challenge</p>
+        <h2>From Spreadsheet Chaos to Business Clarity</h2>
+        <p>Many growing businesses spend countless hours preparing reports instead of using them. Information lives across multiple systems, manual spreadsheets become unreliable, and important decisions are delayed.</p>
+        <p>KeyIntel provides an outsourced business performance function that continuously integrates, organises and visualises your data — delivering reliable reporting, clear visibility and the intelligence that supports confident decision making.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Call To Action -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-box">
-                <h2>Build Executive Insight Without Building an Internal Team</h2>
-                <p>Gain access to enterprise level reporting, automation and strategic business intelligence through a flexible fractional engagement.</p>
-                <a href="mailto:hello@keyintel.co.nz" class="btn btn-primary">Contact Us</a>
-            </div>
-        </div>
-    </section>
+  <!-- Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2>Core Capabilities</h2>
+        <p>Three connected disciplines that turn scattered data into a strategic asset.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card reveal reveal-delay-1">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3>Automated Data Integration</h3>
+          <p>Connect separate business systems into a single source of truth, eliminating repetitive manual reporting and the errors that come with it.</p>
+        </article>
+        <article class="card reveal reveal-delay-2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/>
+            </svg>
+          </div>
+          <h3>Live Performance Dashboards</h3>
+          <p>Visual dashboards that refresh automatically from your connected systems, giving leadership a real-time view of the metrics that drive the business.</p>
+        </article>
+        <article class="card reveal reveal-delay-3">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3>Actionable Business Intelligence</h3>
+          <p>Identify operational inefficiencies and surface hidden opportunities using clean, connected, trustworthy data that management can act on immediately.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>KeyIntel</h3>
-                <p>Helping businesses transform data into strategic intelligence.</p>
-            </div>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="what-is-bi.html">What is BI</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="dashboard.html">Example Dashboard</a>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                &copy; 2026 KeyIntel. All rights reserved.
-            </div>
-        </div>
-    </footer>
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <p class="eyebrow">Ready to start?</p>
+        <h2>Build Executive Insight Without Building an Internal Team</h2>
+        <p>Access enterprise-level reporting, automation and strategic BI through a flexible fractional engagement — scaled to your business.</p>
+        <a href="mailto:hello@keyintel.co.nz" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>KeyIntel</h3>
+        <p>Helping businesses transform data into strategic intelligence.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-is-bi.html">What is BI</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="dashboard.html">Example Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; <span class="footer-year"></span> KeyIntel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
