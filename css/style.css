@@ -500,9 +500,17 @@ nav a:hover, nav a.active { color: var(--white); }
    ═══════════════════════════════════════════════════════════════════════════ */
 .dashboard-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 1fr; /*260px*/
   gap: 2.5rem;
   align-items: start;
+}
+.dashboard-sidebar {
+  /* Turn the sidebar element itself into a flex row container */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows items to wrap nicely on smaller screens */
+  gap: 1rem; /* Spacing between the horizontal cards */
+  width: 100%;
 }
 .dashboard-sidebar h3 {
   font-size: 0.7rem;
@@ -516,7 +524,10 @@ nav a:hover, nav a.active { color: var(--white); }
   border: 1px solid var(--border-card);
   border-radius: var(--radius-sm);
   padding: 1.25rem;
-  margin-bottom: 0.75rem;
+  /*margin-bottom: 0.75rem;*/
+  margin-bottom: 0; 
+  flex: 1 1 calc(25% - 1rem); /* Distributes 4 cards evenly across the row */
+  min-width: 220px; /* Ensures text remains legible on narrower viewports */
 }
 .sidebar-card h4 { font-size: 0.9rem; margin-bottom: 0.35rem; }
 .sidebar-card p { font-size: 0.825rem; color: var(--text-muted); }
