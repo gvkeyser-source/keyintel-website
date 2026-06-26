@@ -517,6 +517,7 @@ nav a:hover, nav a.active { color: var(--white); }
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-dim);
+  flex-basis: 100%;
   margin-bottom: 1rem;
 }
 .sidebar-card {
