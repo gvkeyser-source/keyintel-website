@@ -500,9 +500,13 @@ nav a:hover, nav a.active { color: var(--white); }
    ═══════════════════════════════════════════════════════════════════════════ */
 .dashboard-layout {
   display: grid;
-  grid-template-columns: 1fr; /*260px*/
+  grid-template-columns: 1fr; 
   gap: 2.5rem;
   align-items: start;
+  max-width: 100% !important; 
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 .dashboard-sidebar {
   /* Turn the sidebar element itself into a flex row container */
@@ -511,6 +515,11 @@ nav a:hover, nav a.active { color: var(--white); }
   flex-wrap: wrap; /* Allows items to wrap nicely on smaller screens */
   gap: 1rem; /* Spacing between the horizontal cards */
   width: 100%;
+  width: 100%;
+  max-width: 1200px; /* Restricts the cards to their original maximum width */
+  margin: 0 auto;    /* Centers the card row on large screens */
+  padding: 0 20px;   /* Prevents cards from hitting the absolute edge on smaller windows */
+  box-sizing: border-box;
 }
 .dashboard-sidebar h3 {
   font-size: 0.7rem;
